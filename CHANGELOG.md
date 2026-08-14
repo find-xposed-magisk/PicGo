@@ -1,3 +1,17 @@
+## :tada: 3.0.2 (2026-08-14)
+
+
+### :bug: Bug Fixes
+
+* **gui:** protect persisted provider credentials ([77f1ed1](https://github.com/Molunerfinn/PicGo/commit/77f1ed1))
+
+
+### :zap: Performance Improvements
+
+* **gui:** stop idle GPU churn from uploader status dot ([#1436](https://github.com/Molunerfinn/PicGo/issues/1436)) ([33bbc9a](https://github.com/Molunerfinn/PicGo/commit/33bbc9a))
+
+
+
 ## :tada: 3.0.1 (2026-07-12)
 
 
