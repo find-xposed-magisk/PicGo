@@ -144,7 +144,8 @@ interface IBrowserWindowOptions {
     nodeIntegration: boolean,
     nodeIntegrationInWorker: boolean,
     contextIsolation: boolean,
-    backgroundThrottling: boolean
+    // 不传即沿用 Electron 默认值（true，窗口不可见时降频）；仅在某个窗口确实需要后台全速渲染时才显式关闭。
+    backgroundThrottling?: boolean
     webSecurity?: boolean
   },
   vibrancy?: string | any,
