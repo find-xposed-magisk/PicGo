@@ -91,6 +91,20 @@ PicGo 打造了全方位的上传体验，让“传图”这件事变得前所�
 - **更多可能**：支持图片压缩、水印、重命名、Markdown 图片迁移等功能插件。
   - 探索更多插件：[Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo)
 
+### 🤖 AI 友好
+写文档的活儿越来越多地交给了 AI。但 AI 生成的截图、图表存在本地，`![](./chart.png)`，发布前需要转成可访问链接。PicGo 让 AI 也能轻松传图：
+
+- **[PicGo Skills](https://github.com/PicGo/skills)**：官方 Agent Skills 集合，教会 AI 什么时候该传图、怎么传。适用于任何支持 skills 格式的 AI 工具。
+  ```bash
+  npx skills@latest add PicGo/skills
+  ```
+- **[DeepSeek Harness 插件](https://github.com/PicGo/dsh-plugin)**：在 [dsh](https://github.com/deepseek-ai/deepseek-harness) 里装上它，AI 就能自己把图传到你的图床。
+  ```bash
+  dsh plugin --profile web add @picgo/dsh-plugin
+  ```
+
+两者都会复用你在 PicGo 里已经配好的图床和插件，不用重新配置一遍。详见[这篇介绍](https://picgo.app/blog/2026/picgo-deepseek-harness-plugin/)。
+
 ### 🛠 开发者友好
 - **HTTP API**：支持通过 HTTP 请求调用 PicGo 上传 (v2.2.0+)，方便与其他工具集成。
 - **开源透明**：代码完全开源，安全可靠。
@@ -162,6 +176,8 @@ pnpm run build
 - [vs-picgo](https://github.com/PicGo/vs-picgo)：PicGo 的 VS Code 版。
 - [flutter-picgo](https://github.com/PicGo/flutter-picgo)：PicGo 的手机版 App（支持 Android 和 iOS ）。
 - [PicHoro](https://github.com/Kuingsmile/PicHoro)：另一款支持 PicGo 配置的手机版 App（暂时只支持 Android）。
+- [skills](https://github.com/PicGo/skills)：PicGo 官方 Agent Skills，让 AI 学会用 PicGo 传图。
+- [dsh-plugin](https://github.com/PicGo/dsh-plugin)：PicGo 的 DeepSeek Harness 插件。
 
 ## 赞助
 

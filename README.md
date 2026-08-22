@@ -91,6 +91,20 @@ PicGo is built around a fast, low-friction image upload experience:
 - **Even more possibilities**: image compression, watermarking, renaming, Markdown image migration, and more.
   - Explore plugins: [Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo)
 
+### 🤖 AI-friendly
+More and more writing is handed off to AI. But the screenshots and charts it produces sit on your disk as `![](./chart.png)`, and they need to become real links before you publish. PicGo lets AI upload them too:
+
+- **[PicGo Skills](https://github.com/PicGo/skills)**: official Agent Skills that teach AI when and how to upload. Works with any AI tool that supports the skills format.
+  ```bash
+  npx skills@latest add PicGo/skills
+  ```
+- **[DeepSeek Harness plugin](https://github.com/PicGo/dsh-plugin)**: install it in [dsh](https://github.com/deepseek-ai/deepseek-harness) and your agent can upload to your image host on its own.
+  ```bash
+  dsh plugin --profile web add @picgo/dsh-plugin
+  ```
+
+Both reuse the image hosts and plugins you already configured in PicGo—nothing to set up twice. Read more in [this post](https://picgo.app/blog/2026/picgo-deepseek-harness-plugin/).
+
 ### 🛠 Developer-friendly
 - **HTTP API**: upload via HTTP requests (v2.2.0+), making it easy to integrate with other tools.
 - **Open source**: fully open-source and transparent.
@@ -162,6 +176,8 @@ Electron binaries are stored under `~/.electron/`. If you need to refresh them, 
 - [vs-picgo](https://github.com/PicGo/vs-picgo): PicGo for VS Code.
 - [flutter-picgo](https://github.com/PicGo/flutter-picgo): mobile app (Android & iOS).
 - [PicHoro](https://github.com/Kuingsmile/PicHoro): another mobile app compatible with PicGo config (Android only for now).
+- [skills](https://github.com/PicGo/skills): official Agent Skills that teach AI to upload with PicGo.
+- [dsh-plugin](https://github.com/PicGo/dsh-plugin): PicGo plugin for DeepSeek Harness.
 
 ## Sponsorship
 
