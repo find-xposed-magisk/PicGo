@@ -99,9 +99,10 @@
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.276.0",
     "@aws-sdk/lib-storage": "^3.276.0",
+    "@commitlint/cli": "^21.2.2",
     "@eslint/js": "^9.39.1",
     "@molunerfinn/vite-plugin-electron-renderer": "^0.14.7",
-    "@picgo/bump-version": "^2.0.0",
+    "@picgo/bump-version": "^3.0.0",
     "@stylistic/eslint-plugin": "^5.6.1",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.1",
@@ -160,7 +161,7 @@
   },
   "commitlint": {
     "extends": [
-      "./node_modules/@picgo/bump-version/commitlint-picgo"
+      "./node_modules/@picgo/bump-version/commitlint-picgo/index.cjs"
     ]
   },
   "config": {
@@ -168,12 +169,7 @@
       "path": "./node_modules/cz-customizable"
     },
     "cz-customizable": {
-      "config": "./node_modules/@picgo/bump-version/.cz-config.js"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "npm run lint:dpdm && commitlint -E HUSKY_GIT_PARAMS"
+      "config": "./node_modules/@picgo/bump-version/.cz-config.cjs"
     }
   }
 }
